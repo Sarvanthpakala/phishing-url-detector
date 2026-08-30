@@ -1,0 +1,8 @@
+{
+  "dataset_name": "url_features_extracted1",
+  "url_column": "URL",
+  "label_column": "ClassLabel",
+  "phishing_label_value": 0,
+  "legitimate_label_value": 1,
+  "notes": "This dataset encodes 0 = phishing/malicious and 1 = legitimate in ClassLabel. All other columns in this CSV (url_length, has_ip_address, etc.) are IGNORED by the loader on purpose -- the pipeline recomputes every feature itself from the raw URL string using backend/feature_extractor.py, so training and inference can never drift apart. To use a different dataset, replace dataset.csv and edit only the four keys above (url_column, label_column, phishing_label_value, legitimate_label_value)."
+}

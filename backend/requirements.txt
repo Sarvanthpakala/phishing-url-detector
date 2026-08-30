@@ -1,0 +1,29 @@
+# Core (required)
+flask==3.1.3
+flask-cors==4.0.1
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+matplotlib>=3.7
+seaborn>=0.13
+reportlab>=4.0
+joblib>=1.3
+
+# Optional model backends (the pipeline auto-skips any of these that aren't
+# installed -- training will still run and compare whichever are present)
+xgboost>=2.0
+lightgbm>=4.0
+catboost>=1.2
+
+# Optional explainability (falls back to permutation importance if absent)
+shap>=0.44
+
+# Optional typosquat/brand-similarity accelerator (falls back to a built-in
+# pure-python Levenshtein implementation if absent)
+rapidfuzz>=3.6
+
+# Optional live intel checks (SSL/DNS/WHOIS/redirects) -- gracefully skipped
+# per-signal if any of these are missing
+requests>=2.31
+python-whois>=0.9.4
+dnspython>=2.4
